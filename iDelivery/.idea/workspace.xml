@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="133569d2-c3ac-4833-a6e7-43e102e3a5b6" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../iDeliveryDAL/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../iDeliveryDAL/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../iDeliveryDAL/src/main/resources/database.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../iDeliveryDAL/src/main/resources/database.mv.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../iDeliveryDAL/src/main/resources/database.trace.db" beforeDir="false" />
-    </list>
+    <list default="true" id="133569d2-c3ac-4833-a6e7-43e102e3a5b6" name="Default Changelist" comment="" />
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
