@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="133569d2-c3ac-4833-a6e7-43e102e3a5b6" name="Default Changelist" comment="" />
+    <list default="true" id="133569d2-c3ac-4833-a6e7-43e102e3a5b6" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../iDeliveryDAL/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/../iDeliveryDAL/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iDeliveryDAL/src/main/resources/database.mv.db" beforeDir="false" afterPath="$PROJECT_DIR$/../iDeliveryDAL/src/main/resources/database.mv.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../iDeliveryDAL/src/main/resources/database.trace.db" beforeDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -83,7 +87,7 @@
       </MavenImportingSettings>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="159" />
     <option name="width" value="927" />
     <option name="height" value="1087" />
@@ -172,8 +176,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="85" y="-8" width="1843" height="1096" extended-state="6" />
-    <editor active="true" />
+    <frame x="85" y="-8" width="1843" height="1096" extended-state="7" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18844643" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
