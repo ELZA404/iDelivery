@@ -1,0 +1,694 @@
+2020-05-10 00:51:26 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ROLE" не найдена
+Table "ROLE" not found; SQL statement:
+insert into role values (null, 'admin') [42102-200]
+2020-05-10 00:52:27 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "INSERT INTO USR (NULL[*], 'admin', 'Danyl', 'admin', 1)"; ожидалось "identifier"
+Syntax error in SQL statement "INSERT INTO USR (NULL[*], 'admin', 'Danyl', 'admin', 1)"; expected "identifier"; SQL statement:
+insert into usr (null, 'admin', 'Danyl', 'admin', 1) [42001-200]
+2020-05-10 01:24:16 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:D:/iDelivery/iDelivery/iDelivery/src/main/resources/database.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:D:/iDelivery/iDelivery/iDelivery/src/main/resources/database.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:D:/iDelivery/iDelivery/iDelivery/src/main/resources/database.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:D:/iDelivery/iDelivery/iDelivery/src/main/resources/database.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 65 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:D:/iDelivery/iDelivery/iDelivery/src/main/resources/database.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 59 more
+2020-05-10 01:24:54 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:D:/iDelivery/iDelivery/iDelivery/src/main/resources/database.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:D:/iDelivery/iDelivery/iDelivery/src/main/resources/database.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:D:/iDelivery/iDelivery/iDelivery/src/main/resources/database.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:D:/iDelivery/iDelivery/iDelivery/src/main/resources/database.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 65 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:D:/iDelivery/iDelivery/iDelivery/src/main/resources/database.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 59 more
+2020-05-10 01:25:02 database: flush
+org.h2.message.DbException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:D:/iDelivery/iDelivery/iDelivery/src/main/resources/database.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:D:/iDelivery/iDelivery/iDelivery/src/main/resources/database.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.get(DbException.java:194)
+	at org.h2.message.DbException.convert(DbException.java:347)
+	at org.h2.mvstore.db.MVTableEngine$1.uncaughtException(MVTableEngine.java:93)
+	at org.h2.mvstore.MVStore.handleException(MVStore.java:2877)
+	at org.h2.mvstore.MVStore.panic(MVStore.java:481)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:402)
+	at org.h2.mvstore.MVStore$Builder.open(MVStore.java:3579)
+	at org.h2.mvstore.db.MVTableEngine$Store.open(MVTableEngine.java:170)
+	at org.h2.mvstore.db.MVTableEngine.init(MVTableEngine.java:103)
+	at org.h2.engine.Database.getPageStore(Database.java:2659)
+	at org.h2.engine.Database.open(Database.java:675)
+	at org.h2.engine.Database.openDatabase(Database.java:307)
+	at org.h2.engine.Database.<init>(Database.java:301)
+	at org.h2.engine.Engine.openSession(Engine.java:74)
+	at org.h2.engine.Engine.openSession(Engine.java:192)
+	at org.h2.engine.Engine.createSessionAndValidate(Engine.java:171)
+	at org.h2.engine.Engine.createSession(Engine.java:166)
+	at org.h2.engine.Engine.createSession(Engine.java:29)
+	at org.h2.engine.SessionRemote.connectEmbeddedOrServer(SessionRemote.java:340)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:173)
+	at org.h2.jdbc.JdbcConnection.<init>(JdbcConnection.java:152)
+	at org.h2.Driver.connect(Driver.java:69)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:309)
+	at org.h2.util.JdbcUtils.getConnection(JdbcUtils.java:289)
+	at org.h2.server.web.WebServer.getConnection(WebServer.java:785)
+	at org.h2.server.web.WebApp.login(WebApp.java:1008)
+	at org.h2.server.web.WebApp.process(WebApp.java:223)
+	at org.h2.server.web.WebApp.processRequest(WebApp.java:173)
+	at org.h2.server.web.WebServlet.doGet(WebServlet.java:129)
+	at org.h2.server.web.WebServlet.doPost(WebServlet.java:166)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:660)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:741)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:231)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:119)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:193)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:166)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:202)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:96)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:139)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:343)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:373)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:868)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1590)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1128)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:628)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:835)
+Caused by: org.h2.jdbc.JdbcSQLNonTransientException: Внутренняя ошибка: "java.lang.IllegalStateException: The file is locked: nio:D:/iDelivery/iDelivery/iDelivery/src/main/resources/database.mv.db [1.4.200/7]"
+General error: "java.lang.IllegalStateException: The file is locked: nio:D:/iDelivery/iDelivery/iDelivery/src/main/resources/database.mv.db [1.4.200/7]" [50000-200]
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:505)
+	at org.h2.message.DbException.getJdbcSQLException(DbException.java:429)
+	... 65 more
+Caused by: java.lang.IllegalStateException: The file is locked: nio:D:/iDelivery/iDelivery/iDelivery/src/main/resources/database.mv.db [1.4.200/7]
+	at org.h2.mvstore.DataUtils.newIllegalStateException(DataUtils.java:950)
+	at org.h2.mvstore.FileStore.open(FileStore.java:172)
+	at org.h2.mvstore.MVStore.<init>(MVStore.java:381)
+	... 59 more
+2020-05-10 13:41:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER[*] (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id bigint generated by default as identity, cost float, date date, company_id bigint, courier_id bigint, order_status_id bigint, user_id bigint, primary key (id)) [42001-200]
+2020-05-10 13:41:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER_ITEM (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, ORDER_ID BIGINT, PRODUCT_ID BIGINT, ORDER[*] BIGINT, PRIMARY KEY (ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER_ITEM (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, ORDER_ID BIGINT, PRODUCT_ID BIGINT, ORDER[*] BIGINT, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order_item (id bigint generated by default as identity, order_id bigint, product_id bigint, order bigint, primary key (id)) [42001-200]
+2020-05-10 13:41:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; expected "identifier"; SQL statement:
+alter table order add constraint FK6quba0rx4h4y59rphvj36i36f foreign key (company_id) references company [42001-200]
+2020-05-10 13:41:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; expected "identifier"; SQL statement:
+alter table order add constraint FKpvay0ycleiixer0mbdv1ulg2a foreign key (courier_id) references courier [42001-200]
+2020-05-10 13:41:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; expected "identifier"; SQL statement:
+alter table order add constraint FK7q0wbceok1b5pmnnesq7p91h5 foreign key (order_status_id) references order_status [42001-200]
+2020-05-10 13:41:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; expected "identifier"; SQL statement:
+alter table order add constraint FKg5lnuplvt1kxbrv82bpimkmb6 foreign key (user_id) references usr [42001-200]
+2020-05-10 13:41:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; expected "identifier"; SQL statement:
+alter table order_item add constraint FKt6wv8m7eshksp5kp8w4b2d1dm foreign key (order_id) references order [42001-200]
+2020-05-10 13:41:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ORDER_ITEM" не найдена
+Table "ORDER_ITEM" not found; SQL statement:
+alter table order_item add constraint FK551losx9j75ss5d6bfsqvijna foreign key (product_id) references product [42102-200]
+2020-05-10 13:41:37 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKSRNGHL54Y476H7BIDK7WKPGFO FOREIGN KEY (ORDER[*]) REFERENCES ORDER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKSRNGHL54Y476H7BIDK7WKPGFO FOREIGN KEY (ORDER[*]) REFERENCES ORDER"; expected "identifier"; SQL statement:
+alter table order_item add constraint FKsrnghl54y476h7bidk7wkpgfo foreign key (order) references order [42001-200]
+2020-05-10 13:46:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER[*] (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id bigint generated by default as identity, cost float, date date, company_id bigint, courier_id bigint, order_status_id bigint, user_id bigint, primary key (id)) [42001-200]
+2020-05-10 13:46:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER_ITEM (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, ORDER_ID BIGINT, PRODUCT_ID BIGINT, ORDER[*] BIGINT, PRIMARY KEY (ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER_ITEM (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, ORDER_ID BIGINT, PRODUCT_ID BIGINT, ORDER[*] BIGINT, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order_item (id bigint generated by default as identity, order_id bigint, product_id bigint, order bigint, primary key (id)) [42001-200]
+2020-05-10 13:46:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; expected "identifier"; SQL statement:
+alter table order add constraint FK6quba0rx4h4y59rphvj36i36f foreign key (company_id) references company [42001-200]
+2020-05-10 13:46:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; expected "identifier"; SQL statement:
+alter table order add constraint FKpvay0ycleiixer0mbdv1ulg2a foreign key (courier_id) references courier [42001-200]
+2020-05-10 13:46:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; expected "identifier"; SQL statement:
+alter table order add constraint FK7q0wbceok1b5pmnnesq7p91h5 foreign key (order_status_id) references order_status [42001-200]
+2020-05-10 13:46:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; expected "identifier"; SQL statement:
+alter table order add constraint FKg5lnuplvt1kxbrv82bpimkmb6 foreign key (user_id) references usr [42001-200]
+2020-05-10 13:46:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; expected "identifier"; SQL statement:
+alter table order_item add constraint FKt6wv8m7eshksp5kp8w4b2d1dm foreign key (order_id) references order [42001-200]
+2020-05-10 13:46:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ORDER_ITEM" не найдена
+Table "ORDER_ITEM" not found; SQL statement:
+alter table order_item add constraint FK551losx9j75ss5d6bfsqvijna foreign key (product_id) references product [42102-200]
+2020-05-10 13:46:33 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKSRNGHL54Y476H7BIDK7WKPGFO FOREIGN KEY (ORDER[*]) REFERENCES ORDER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKSRNGHL54Y476H7BIDK7WKPGFO FOREIGN KEY (ORDER[*]) REFERENCES ORDER"; expected "identifier"; SQL statement:
+alter table order_item add constraint FKsrnghl54y476h7bidk7wkpgfo foreign key (order) references order [42001-200]
+2020-05-10 13:48:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER[*] (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id bigint generated by default as identity, cost float, date date, company_id bigint, courier_id bigint, order_status_id bigint, user_id bigint, primary key (id)) [42001-200]
+2020-05-10 13:48:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER_ITEM (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, ORDER_ID BIGINT, PRODUCT_ID BIGINT, ORDER[*] BIGINT, PRIMARY KEY (ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER_ITEM (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, ORDER_ID BIGINT, PRODUCT_ID BIGINT, ORDER[*] BIGINT, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order_item (id bigint generated by default as identity, order_id bigint, product_id bigint, order bigint, primary key (id)) [42001-200]
+2020-05-10 13:48:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; expected "identifier"; SQL statement:
+alter table order add constraint FK6quba0rx4h4y59rphvj36i36f foreign key (company_id) references company [42001-200]
+2020-05-10 13:48:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; expected "identifier"; SQL statement:
+alter table order add constraint FKpvay0ycleiixer0mbdv1ulg2a foreign key (courier_id) references courier [42001-200]
+2020-05-10 13:48:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; expected "identifier"; SQL statement:
+alter table order add constraint FK7q0wbceok1b5pmnnesq7p91h5 foreign key (order_status_id) references order_status [42001-200]
+2020-05-10 13:48:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; expected "identifier"; SQL statement:
+alter table order add constraint FKg5lnuplvt1kxbrv82bpimkmb6 foreign key (user_id) references usr [42001-200]
+2020-05-10 13:48:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; expected "identifier"; SQL statement:
+alter table order_item add constraint FKt6wv8m7eshksp5kp8w4b2d1dm foreign key (order_id) references order [42001-200]
+2020-05-10 13:48:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Таблица "ORDER_ITEM" не найдена
+Table "ORDER_ITEM" not found; SQL statement:
+alter table order_item add constraint FK551losx9j75ss5d6bfsqvijna foreign key (product_id) references product [42102-200]
+2020-05-10 13:48:16 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKSRNGHL54Y476H7BIDK7WKPGFO FOREIGN KEY (ORDER[*]) REFERENCES ORDER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKSRNGHL54Y476H7BIDK7WKPGFO FOREIGN KEY (ORDER[*]) REFERENCES ORDER"; expected "identifier"; SQL statement:
+alter table order_item add constraint FKsrnghl54y476h7bidk7wkpgfo foreign key (order) references order [42001-200]
+2020-05-10 13:49:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER[*] (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id bigint generated by default as identity, cost float, date date, company_id bigint, courier_id bigint, order_status_id bigint, user_id bigint, primary key (id)) [42001-200]
+2020-05-10 13:49:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; expected "identifier"; SQL statement:
+alter table order add constraint FK6quba0rx4h4y59rphvj36i36f foreign key (company_id) references company [42001-200]
+2020-05-10 13:49:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; expected "identifier"; SQL statement:
+alter table order add constraint FKpvay0ycleiixer0mbdv1ulg2a foreign key (courier_id) references courier [42001-200]
+2020-05-10 13:49:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; expected "identifier"; SQL statement:
+alter table order add constraint FK7q0wbceok1b5pmnnesq7p91h5 foreign key (order_status_id) references order_status [42001-200]
+2020-05-10 13:49:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; expected "identifier"; SQL statement:
+alter table order add constraint FKg5lnuplvt1kxbrv82bpimkmb6 foreign key (user_id) references usr [42001-200]
+2020-05-10 13:49:42 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; expected "identifier"; SQL statement:
+alter table order_item add constraint FKt6wv8m7eshksp5kp8w4b2d1dm foreign key (order_id) references order [42001-200]
+2020-05-10 13:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER[*] (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id bigint generated by default as identity, cost float, date date, company_id bigint, courier_id bigint, order_status_id bigint, user_id bigint, primary key (id)) [42001-200]
+2020-05-10 13:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; expected "identifier"; SQL statement:
+alter table order add constraint FK6quba0rx4h4y59rphvj36i36f foreign key (company_id) references company [42001-200]
+2020-05-10 13:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; expected "identifier"; SQL statement:
+alter table order add constraint FKpvay0ycleiixer0mbdv1ulg2a foreign key (courier_id) references courier [42001-200]
+2020-05-10 13:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; expected "identifier"; SQL statement:
+alter table order add constraint FK7q0wbceok1b5pmnnesq7p91h5 foreign key (order_status_id) references order_status [42001-200]
+2020-05-10 13:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; expected "identifier"; SQL statement:
+alter table order add constraint FKg5lnuplvt1kxbrv82bpimkmb6 foreign key (user_id) references usr [42001-200]
+2020-05-10 13:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; expected "identifier"; SQL statement:
+alter table order_item add constraint FKt6wv8m7eshksp5kp8w4b2d1dm foreign key (order_id) references order [42001-200]
+2020-05-10 13:51:12 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKGGWRUIFGWI82IA0FDS1526V7D FOREIGN KEY (ID) REFERENCES ORDER[*]"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKGGWRUIFGWI82IA0FDS1526V7D FOREIGN KEY (ID) REFERENCES ORDER[*]"; expected "identifier"; SQL statement:
+alter table order_item add constraint FKggwruifgwi82ia0fds1526v7d foreign key (id) references order [42001-200]
+2020-05-10 13:54:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER[*] (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id bigint generated by default as identity, cost float, date date, company_id bigint, courier_id bigint, order_status_id bigint, user_id bigint, primary key (id)) [42001-200]
+2020-05-10 13:54:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; expected "identifier"; SQL statement:
+alter table order add constraint FK6quba0rx4h4y59rphvj36i36f foreign key (company_id) references company [42001-200]
+2020-05-10 13:54:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; expected "identifier"; SQL statement:
+alter table order add constraint FKpvay0ycleiixer0mbdv1ulg2a foreign key (courier_id) references courier [42001-200]
+2020-05-10 13:54:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; expected "identifier"; SQL statement:
+alter table order add constraint FK7q0wbceok1b5pmnnesq7p91h5 foreign key (order_status_id) references order_status [42001-200]
+2020-05-10 13:54:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; expected "identifier"; SQL statement:
+alter table order add constraint FKg5lnuplvt1kxbrv82bpimkmb6 foreign key (user_id) references usr [42001-200]
+2020-05-10 13:54:10 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER_PRODUCTS ADD CONSTRAINT FKOQPGOC81NPYUP5MA3IDJWJ0XO FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER_PRODUCTS ADD CONSTRAINT FKOQPGOC81NPYUP5MA3IDJWJ0XO FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; expected "identifier"; SQL statement:
+alter table order_products add constraint FKoqpgoc81npyup5ma3idjwj0xo foreign key (order_id) references order [42001-200]
+2020-05-10 13:58:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER[*] (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id bigint generated by default as identity, cost float, date date, company_id bigint, courier_id bigint, order_status_id bigint, user_id bigint, primary key (id)) [42001-200]
+2020-05-10 13:58:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; expected "identifier"; SQL statement:
+alter table order add constraint FK6quba0rx4h4y59rphvj36i36f foreign key (company_id) references company [42001-200]
+2020-05-10 13:58:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; expected "identifier"; SQL statement:
+alter table order add constraint FKpvay0ycleiixer0mbdv1ulg2a foreign key (courier_id) references courier [42001-200]
+2020-05-10 13:58:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; expected "identifier"; SQL statement:
+alter table order add constraint FK7q0wbceok1b5pmnnesq7p91h5 foreign key (order_status_id) references order_status [42001-200]
+2020-05-10 13:58:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; expected "identifier"; SQL statement:
+alter table order add constraint FKg5lnuplvt1kxbrv82bpimkmb6 foreign key (user_id) references usr [42001-200]
+2020-05-10 13:58:14 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER_PRODUCTS ADD CONSTRAINT FKOQPGOC81NPYUP5MA3IDJWJ0XO FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER_PRODUCTS ADD CONSTRAINT FKOQPGOC81NPYUP5MA3IDJWJ0XO FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; expected "identifier"; SQL statement:
+alter table order_products add constraint FKoqpgoc81npyup5ma3idjwj0xo foreign key (order_id) references order [42001-200]
+2020-05-10 14:08:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ORDER_ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ORDER_ID))"; expected "identifier"; SQL statement:
+create table order (order_id bigint generated by default as identity, cost float, date date, company_id bigint, courier_id bigint, order_status_id bigint, user_id bigint, primary key (order_id)) [42001-200]
+2020-05-10 14:08:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; expected "identifier"; SQL statement:
+alter table order add constraint FK6quba0rx4h4y59rphvj36i36f foreign key (company_id) references company [42001-200]
+2020-05-10 14:08:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; expected "identifier"; SQL statement:
+alter table order add constraint FKpvay0ycleiixer0mbdv1ulg2a foreign key (courier_id) references courier [42001-200]
+2020-05-10 14:08:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; expected "identifier"; SQL statement:
+alter table order add constraint FK7q0wbceok1b5pmnnesq7p91h5 foreign key (order_status_id) references order_status [42001-200]
+2020-05-10 14:08:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; expected "identifier"; SQL statement:
+alter table order add constraint FKg5lnuplvt1kxbrv82bpimkmb6 foreign key (user_id) references usr [42001-200]
+2020-05-10 14:08:02 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE PRODUCT ADD CONSTRAINT FKRLPO4ADRDMKKXU9GPOSP19Q0R FOREIGN KEY (PRODUCT_ID) REFERENCES ORDER[*]"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE PRODUCT ADD CONSTRAINT FKRLPO4ADRDMKKXU9GPOSP19Q0R FOREIGN KEY (PRODUCT_ID) REFERENCES ORDER[*]"; expected "identifier"; SQL statement:
+alter table product add constraint FKrlpo4adrdmkkxu9gposp19q0r foreign key (product_id) references order [42001-200]
+2020-05-10 14:11:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ORDER_ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ORDER_ID))"; expected "identifier"; SQL statement:
+create table order (order_id bigint generated by default as identity, cost float, date date, company_id bigint, courier_id bigint, order_status_id bigint, user_id bigint, primary key (order_id)) [42001-200]
+2020-05-10 14:11:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; expected "identifier"; SQL statement:
+alter table order add constraint FK6quba0rx4h4y59rphvj36i36f foreign key (company_id) references company [42001-200]
+2020-05-10 14:11:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; expected "identifier"; SQL statement:
+alter table order add constraint FKpvay0ycleiixer0mbdv1ulg2a foreign key (courier_id) references courier [42001-200]
+2020-05-10 14:11:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; expected "identifier"; SQL statement:
+alter table order add constraint FK7q0wbceok1b5pmnnesq7p91h5 foreign key (order_status_id) references order_status [42001-200]
+2020-05-10 14:11:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; expected "identifier"; SQL statement:
+alter table order add constraint FKg5lnuplvt1kxbrv82bpimkmb6 foreign key (user_id) references usr [42001-200]
+2020-05-10 14:11:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKOMCGN39RPRA8EPFAE75BU13E5 FOREIGN KEY (ORDER_ORDER_ID) REFERENCES ORDER[*]"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKOMCGN39RPRA8EPFAE75BU13E5 FOREIGN KEY (ORDER_ORDER_ID) REFERENCES ORDER[*]"; expected "identifier"; SQL statement:
+alter table order_item add constraint FKomcgn39rpra8epfae75bu13e5 foreign key (order_order_id) references order [42001-200]
+2020-05-10 14:11:47 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKCF9OLW84TIL611G0YXRAWSXBD FOREIGN KEY (PRODUCT_ID) REFERENCES ORDER[*]"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKCF9OLW84TIL611G0YXRAWSXBD FOREIGN KEY (PRODUCT_ID) REFERENCES ORDER[*]"; expected "identifier"; SQL statement:
+alter table order_item add constraint FKcf9olw84til611g0yxrawsxbd foreign key (product_id) references order [42001-200]
+2020-05-10 14:19:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ORDER_ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ORDER_ID))"; expected "identifier"; SQL statement:
+create table order (order_id bigint generated by default as identity, cost float, date date, company_id bigint, courier_id bigint, order_status_id bigint, user_id bigint, primary key (order_id)) [42001-200]
+2020-05-10 14:19:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; expected "identifier"; SQL statement:
+alter table order add constraint FK6quba0rx4h4y59rphvj36i36f foreign key (company_id) references company [42001-200]
+2020-05-10 14:19:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; expected "identifier"; SQL statement:
+alter table order add constraint FKpvay0ycleiixer0mbdv1ulg2a foreign key (courier_id) references courier [42001-200]
+2020-05-10 14:19:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; expected "identifier"; SQL statement:
+alter table order add constraint FK7q0wbceok1b5pmnnesq7p91h5 foreign key (order_status_id) references order_status [42001-200]
+2020-05-10 14:19:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; expected "identifier"; SQL statement:
+alter table order add constraint FKg5lnuplvt1kxbrv82bpimkmb6 foreign key (user_id) references usr [42001-200]
+2020-05-10 14:19:04 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; expected "identifier"; SQL statement:
+alter table order_item add constraint FKt6wv8m7eshksp5kp8w4b2d1dm foreign key (order_id) references order [42001-200]
+2020-05-10 14:20:29 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ORDER_ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ORDER_ID))"; expected "identifier"; SQL statement:
+create table order (order_id bigint generated by default as identity, cost float, date date, company_id bigint, courier_id bigint, order_status_id bigint, user_id bigint, primary key (order_id)) [42001-200]
+2020-05-10 14:20:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; expected "identifier"; SQL statement:
+alter table order add constraint FK6quba0rx4h4y59rphvj36i36f foreign key (company_id) references company [42001-200]
+2020-05-10 14:20:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; expected "identifier"; SQL statement:
+alter table order add constraint FKpvay0ycleiixer0mbdv1ulg2a foreign key (courier_id) references courier [42001-200]
+2020-05-10 14:20:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; expected "identifier"; SQL statement:
+alter table order add constraint FK7q0wbceok1b5pmnnesq7p91h5 foreign key (order_status_id) references order_status [42001-200]
+2020-05-10 14:20:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; expected "identifier"; SQL statement:
+alter table order add constraint FKg5lnuplvt1kxbrv82bpimkmb6 foreign key (user_id) references usr [42001-200]
+2020-05-10 14:20:30 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; expected "identifier"; SQL statement:
+alter table order_item add constraint FKt6wv8m7eshksp5kp8w4b2d1dm foreign key (order_id) references order [42001-200]
+2020-05-10 14:25:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER[*] (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ID))"; expected "identifier"; SQL statement:
+create table order (id bigint generated by default as identity, cost float, date date, company_id bigint, courier_id bigint, order_status_id bigint, user_id bigint, primary key (id)) [42001-200]
+2020-05-10 14:25:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; expected "identifier"; SQL statement:
+alter table order add constraint FK6quba0rx4h4y59rphvj36i36f foreign key (company_id) references company [42001-200]
+2020-05-10 14:25:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; expected "identifier"; SQL statement:
+alter table order add constraint FKpvay0ycleiixer0mbdv1ulg2a foreign key (courier_id) references courier [42001-200]
+2020-05-10 14:25:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; expected "identifier"; SQL statement:
+alter table order add constraint FK7q0wbceok1b5pmnnesq7p91h5 foreign key (order_status_id) references order_status [42001-200]
+2020-05-10 14:25:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; expected "identifier"; SQL statement:
+alter table order add constraint FKg5lnuplvt1kxbrv82bpimkmb6 foreign key (user_id) references usr [42001-200]
+2020-05-10 14:25:03 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; expected "identifier"; SQL statement:
+alter table order_item add constraint FKt6wv8m7eshksp5kp8w4b2d1dm foreign key (order_id) references order [42001-200]
+2020-05-10 14:26:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ORDER_ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ORDER_ID))"; expected "identifier"; SQL statement:
+create table order (order_id bigint generated by default as identity, cost float, date date, company_id bigint, courier_id bigint, order_status_id bigint, user_id bigint, primary key (order_id)) [42001-200]
+2020-05-10 14:26:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; expected "identifier"; SQL statement:
+alter table order add constraint FK6quba0rx4h4y59rphvj36i36f foreign key (company_id) references company [42001-200]
+2020-05-10 14:26:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; expected "identifier"; SQL statement:
+alter table order add constraint FKpvay0ycleiixer0mbdv1ulg2a foreign key (courier_id) references courier [42001-200]
+2020-05-10 14:26:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; expected "identifier"; SQL statement:
+alter table order add constraint FK7q0wbceok1b5pmnnesq7p91h5 foreign key (order_status_id) references order_status [42001-200]
+2020-05-10 14:26:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; expected "identifier"; SQL statement:
+alter table order add constraint FKg5lnuplvt1kxbrv82bpimkmb6 foreign key (user_id) references usr [42001-200]
+2020-05-10 14:26:48 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; expected "identifier"; SQL statement:
+alter table order_item add constraint FKt6wv8m7eshksp5kp8w4b2d1dm foreign key (order_id) references order [42001-200]
+2020-05-10 14:28:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ORDER_ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ORDER_ID))"; expected "identifier"; SQL statement:
+create table order (order_id bigint generated by default as identity, cost float, date date, company_id bigint, courier_id bigint, order_status_id bigint, user_id bigint, primary key (order_id)) [42001-200]
+2020-05-10 14:28:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; expected "identifier"; SQL statement:
+alter table order add constraint FK6quba0rx4h4y59rphvj36i36f foreign key (company_id) references company [42001-200]
+2020-05-10 14:28:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; expected "identifier"; SQL statement:
+alter table order add constraint FKpvay0ycleiixer0mbdv1ulg2a foreign key (courier_id) references courier [42001-200]
+2020-05-10 14:28:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; expected "identifier"; SQL statement:
+alter table order add constraint FK7q0wbceok1b5pmnnesq7p91h5 foreign key (order_status_id) references order_status [42001-200]
+2020-05-10 14:28:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; expected "identifier"; SQL statement:
+alter table order add constraint FKg5lnuplvt1kxbrv82bpimkmb6 foreign key (user_id) references usr [42001-200]
+2020-05-10 14:28:06 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER_ITEM ADD CONSTRAINT FKT6WV8M7ESHKSP5KP8W4B2D1DM FOREIGN KEY (ORDER_ID) REFERENCES ORDER[*]"; expected "identifier"; SQL statement:
+alter table order_item add constraint FKt6wv8m7eshksp5kp8w4b2d1dm foreign key (order_id) references order [42001-200]
+2020-05-10 14:29:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ORDER_ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, USER_ID BIGINT, PRIMARY KEY (ORDER_ID))"; expected "identifier"; SQL statement:
+create table order (order_id bigint generated by default as identity, cost float, date date, company_id bigint, courier_id bigint, order_status_id bigint, user_id bigint, primary key (order_id)) [42001-200]
+2020-05-10 14:29:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; expected "identifier"; SQL statement:
+alter table order add constraint FK6quba0rx4h4y59rphvj36i36f foreign key (company_id) references company [42001-200]
+2020-05-10 14:29:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; expected "identifier"; SQL statement:
+alter table order add constraint FKpvay0ycleiixer0mbdv1ulg2a foreign key (courier_id) references courier [42001-200]
+2020-05-10 14:29:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; expected "identifier"; SQL statement:
+alter table order add constraint FK7q0wbceok1b5pmnnesq7p91h5 foreign key (order_status_id) references order_status [42001-200]
+2020-05-10 14:29:11 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKG5LNUPLVT1KXBRV82BPIMKMB6 FOREIGN KEY (USER_ID) REFERENCES USR"; expected "identifier"; SQL statement:
+alter table order add constraint FKg5lnuplvt1kxbrv82bpimkmb6 foreign key (user_id) references usr [42001-200]
+2020-05-10 14:30:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, PRIMARY KEY (ORDER_ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, PRIMARY KEY (ORDER_ID))"; expected "identifier"; SQL statement:
+create table order (order_id bigint generated by default as identity, cost float, date date, company_id bigint, courier_id bigint, order_status_id bigint, primary key (order_id)) [42001-200]
+2020-05-10 14:30:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; expected "identifier"; SQL statement:
+alter table order add constraint FK6quba0rx4h4y59rphvj36i36f foreign key (company_id) references company [42001-200]
+2020-05-10 14:30:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; expected "identifier"; SQL statement:
+alter table order add constraint FKpvay0ycleiixer0mbdv1ulg2a foreign key (courier_id) references courier [42001-200]
+2020-05-10 14:30:28 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; expected "identifier"; SQL statement:
+alter table order add constraint FK7q0wbceok1b5pmnnesq7p91h5 foreign key (order_status_id) references order_status [42001-200]
+2020-05-10 14:31:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, PRIMARY KEY (ORDER_ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, PRIMARY KEY (ORDER_ID))"; expected "identifier"; SQL statement:
+create table order (order_id bigint generated by default as identity, cost float, date date, company_id bigint, courier_id bigint, order_status_id bigint, primary key (order_id)) [42001-200]
+2020-05-10 14:31:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; expected "identifier"; SQL statement:
+alter table order add constraint FK6quba0rx4h4y59rphvj36i36f foreign key (company_id) references company [42001-200]
+2020-05-10 14:31:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; expected "identifier"; SQL statement:
+alter table order add constraint FKpvay0ycleiixer0mbdv1ulg2a foreign key (courier_id) references courier [42001-200]
+2020-05-10 14:31:31 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; expected "identifier"; SQL statement:
+alter table order add constraint FK7q0wbceok1b5pmnnesq7p91h5 foreign key (order_status_id) references order_status [42001-200]
+2020-05-10 14:32:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "DROP TABLE IF EXISTS ORDER[*] CASCADE "; ожидалось "identifier"
+Syntax error in SQL statement "DROP TABLE IF EXISTS ORDER[*] CASCADE "; expected "identifier"; SQL statement:
+drop table if exists order CASCADE  [42001-200]
+2020-05-10 14:32:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, PRIMARY KEY (ORDER_ID))"; ожидалось "identifier"
+Syntax error in SQL statement "CREATE TABLE ORDER[*] (ORDER_ID BIGINT GENERATED BY DEFAULT AS IDENTITY, COST FLOAT, DATE DATE, COMPANY_ID BIGINT, COURIER_ID BIGINT, ORDER_STATUS_ID BIGINT, PRIMARY KEY (ORDER_ID))"; expected "identifier"; SQL statement:
+create table order (order_id bigint generated by default as identity, cost float, date date, company_id bigint, courier_id bigint, order_status_id bigint, primary key (order_id)) [42001-200]
+2020-05-10 14:32:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK6QUBA0RX4H4Y59RPHVJ36I36F FOREIGN KEY (COMPANY_ID) REFERENCES COMPANY"; expected "identifier"; SQL statement:
+alter table order add constraint FK6quba0rx4h4y59rphvj36i36f foreign key (company_id) references company [42001-200]
+2020-05-10 14:32:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FKPVAY0YCLEIIXER0MBDV1ULG2A FOREIGN KEY (COURIER_ID) REFERENCES COURIER"; expected "identifier"; SQL statement:
+alter table order add constraint FKpvay0ycleiixer0mbdv1ulg2a foreign key (courier_id) references courier [42001-200]
+2020-05-10 14:32:34 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Синтаксическая ошибка в выражении SQL "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; ожидалось "identifier"
+Syntax error in SQL statement "ALTER TABLE ORDER[*] ADD CONSTRAINT FK7Q0WBCEOK1B5PMNNESQ7P91H5 FOREIGN KEY (ORDER_STATUS_ID) REFERENCES ORDER_STATUS"; expected "identifier"; SQL statement:
+alter table order add constraint FK7q0wbceok1b5pmnnesq7p91h5 foreign key (order_status_id) references order_status [42001-200]
